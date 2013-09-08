@@ -1,10 +1,9 @@
-
 ETI Fork Details
 ================
 
 The purpose of this fork is to make Eurkea work with other Cloud providers. The two problems we found during porting, where around DNS and Name Resolution.
 
-* When configuring Eureka to use DNS configuration, Eureka relies on multi-line DNS TXT records. This isn't supported on either of the DNS providers we had access to. We modified the code to use a space delimitted list, and to remove surrounding double quotes. Both of these changes are compatiable when used with a DNS provier which does support multiple text records.
+* When configuring Eureka to use DNS configuration, Eureka relies on multi-line DNS TXT records. This isn't supported on either of the DNS providers we had access to. We modified the code to use a space delimitted list, and to remove any surrounding double quotes. Both of these changes are compatiable when used with a DNS provier which does support multiple text records.
 * The original implementation relied on the local hostname and domain be resolvable to an IP address.  This isn't necessarily the case with every cloud provider, so we changed the code to register the private IP address as opposed to the domain name and host.
 
 Eureka
