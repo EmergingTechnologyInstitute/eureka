@@ -1,3 +1,5 @@
+defaultTasks 'clean', 'build'
+
 ext.githubProjectName = 'eureka'
 
 buildscript {
